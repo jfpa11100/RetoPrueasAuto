@@ -1,0 +1,23 @@
+from dataclasses import dataclass, field
+
+@dataclass
+class Letra:
+    letra: str
+
+class Palabra:
+    palabra = []
+    for l in word:
+        palabra.append(Letra(l))
+
+
+    def cantVocales(self):
+        vocales = ('a', 'e', 'i', 'o', 'u')
+        vocal = 0
+        for i in self.palabra:
+            if i.letra in vocales:
+                vocal += 1 
+        return f"cantidad de vocales {vocal}"
+
+
+word = Palabra("hola")
+print(word.cantVocales())
